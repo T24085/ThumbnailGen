@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Thumbnail Creator</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- PayPal JS SDK: replace YOUR_CLIENT_ID with your live Client ID -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"
+    data-sdk-integration-source="button-factory">
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -44,22 +50,13 @@
 
   <section id="buy">
     <h2>Buy the Full Version</h2>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <!-- PayPal button setup -->
-      <input type="hidden" name="cmd" value="_s-xclick" />
-      <input type="hidden" name="hosted_button_id"
-             value="BAAKllKXLa6Y_T-XCHNZRxyaKK6C81RQS2uC3AlM0hlGnrU80YU_xhJ-l59c6sotXOibHRAUIcdfH21Q7A" />
-      <!-- Redirect buyers here after successful payment -->
-      <input type="hidden" name="return"
-             value="https://youruser.github.io/yourrepo/thankyou.html" />
-      <input type="hidden" name="rm" value="2" />
-      <input type="image"
-             src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
-             border="0" name="submit" alt="Buy Now" />
-      <img alt="" border="0"
-           src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
-           width="1" height="1" />
-    </form>
+    <!-- PayPal Hosted Button -->
+    <div id="paypal-container-F9QTZ6CEE6764"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "F9QTZ6CEE6764"
+      }).render("#paypal-container-F9QTZ6CEE6764");
+    </script>
     <p class="note">One‑time purchase of <strong>$4.99</strong>—lifetime updates.</p>
   </section>
 
