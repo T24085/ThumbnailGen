@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Thumbnail Creator</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- PayPal JS SDK: replace YOUR_CLIENT_ID with your live Client ID -->
-  <script
-    src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"
-    data-sdk-integration-source="button-factory">
-  </script>
 </head>
 <body>
   <header class="site-header">
@@ -50,13 +44,47 @@
 
   <section id="buy">
     <h2>Buy the Full Version</h2>
-    <!-- PayPal Hosted Button -->
-    <div id="paypal-container-F9QTZ6CEE6764"></div>
-    <script>
-      paypal.HostedButtons({
-        hostedButtonId: "F9QTZ6CEE6764"
-      }).render("#paypal-container-F9QTZ6CEE6764");
-    </script>
+
+    <!-- Your custom PayPal button -->
+    <style>
+      .pp-F9QTZ6CEE6764 {
+        text-align: center;
+        border: none;
+        border-radius: 0.25rem;
+        min-width: 11.625rem;
+        padding: 0 2rem;
+        height: 2.625rem;
+        font-weight: bold;
+        background-color: #FFD140;
+        color: #000000;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        cursor: pointer;
+      }
+    </style>
+
+    <form
+      action="https://www.paypal.com/ncp/payment/F9QTZ6CEE6764"
+      method="post"
+      target="_blank"
+      style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"
+    >
+      <input class="pp-F9QTZ6CEE6764" type="submit" value="Buy Now – $4.99" />
+      <img
+        src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg"
+        alt="cards"
+      />
+      <section style="font-size: 0.75rem;">
+        Powered by
+        <img
+          src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg"
+          alt="paypal"
+          style="height:0.875rem;vertical-align:middle;"
+        />
+      </section>
+    </form>
+
     <p class="note">One‑time purchase of <strong>$4.99</strong>—lifetime updates.</p>
   </section>
 
