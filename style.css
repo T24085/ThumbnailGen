@@ -1,0 +1,68 @@
+/* A simple “modern” theme */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background: #fafafa;
+}
+
+.site-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem; background: #222; color: #fff;
+}
+
+.site-header nav a {
+  color: #ddd; margin-left: 1rem; text-decoration: none;
+}
+.site-header nav a:hover {
+  color: #fff;
+}
+
+#hero {
+  text-align: center; padding: 4rem 2rem;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+}
+#hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+#hero p  { font-size: 1.2rem; margin-bottom: 2rem; }
+.btn {
+  display: inline-block; padding: 0.75rem 1.5rem;
+  background: #ff4081; color: #fff; text-decoration: none;
+  border-radius: 4px; font-weight: bold;
+}
+.btn:hover { background: #e73370; }
+
+section { padding: 2rem; }
+section h2 { margin-bottom: 1rem; font-size: 1.75rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+
+#features ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+}
+#features li {
+  background: #fff; padding: 1rem; border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 1rem;
+}
+.gallery img {
+  width: 100%; border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+#download p { margin-bottom: 1rem; }
+#buy form { margin-bottom: 0.5rem; }
+
+footer {
+  text-align: center; padding: 1rem; font-size: 0.9rem;
+  background: #222; color: #aaa;
+}
+footer a { color: #ddd; }
+footer a:hover { color: #fff; }
